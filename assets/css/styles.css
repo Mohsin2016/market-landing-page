@@ -113,7 +113,7 @@ footer .social-icons svg{height: 20px;}
   #mobileMenu.active .navigation-list .cancel img{max-width:16px;}
   #mobileMenu.active .navigation-list ul {display:flex; flex-wrap:wrap;}
   #mobileMenu.active .navigation-list ul li{width:100%;margin: 0 0 8px;padding: 8px 25px;}
-  #mobileMenu.active .navigation-list ul li a{color:#fff;margin: 0;}
+  #mobileMenu.active .navigation-list ul li a{color:#fff;margin: 0; line-height:normal;}
 
   .homepage-banner h1{font-size: 40px;text-align: center;}
   .homepage-banner p{font-size: 16px;text-align: center;}
