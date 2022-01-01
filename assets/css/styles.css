@@ -41,30 +41,34 @@ header .header-wrapper .menu-trigger:hover span:last-child {width: 100%;}
 .markets .tabs-content-area {margin-top: 45px;}
 .tabs-content-area .nav-tabs {border: none;display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;border-bottom: 1px solid #e5e5e5;}
 .tabs-content-area .nav-tabs .nav-item .nav-link {border: none;font-size: 18px;font-weight: 600;color: #A7A7A7;padding-bottom: 10px;}
-.tabs-content-area .nav-tabs .nav-item .nav-link.active {color: #02005F;border-bottom: 2px solid #02005F;}
+.tabs-content-area .nav-tabs .nav-item .nav-link.active {color: #004236;border-bottom: 2px solid #004236;}
 .tabs-content-area .nav-tabs .nav-item:nth-child(n+2) {margin-left: 103px;}
 .tabs-content-area .tab-content {margin-top: 60px;}
-.tabs-content-area .tab-content .tabs-top-area {display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-pack: justify;-ms-flex-pack: justify;justify-content: space-between;margin-bottom: 24px;}
+.tabs-content-area .tab-content .tabs-top-area {display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-pack: justify;-ms-flex-pack: justify;justify-content: space-between;}
 .tabs-content-area .tab-content .tabs-top-area h3 {font-size: 35px;line-height: 53px;color: #000000;font-weight: 600;}
 .tabs-content-area .tab-content .tabs-top-area .viewall {display: flex;align-items: center; text-decoration: none;}
 .tabs-content-area .tab-content .tabs-top-area .viewall span {margin-bottom: 0;font-size: 15px;font-weight: 500;color: #000000;padding-right: 10px;}
-.tabs-content-area .tab-content .tabs-top-area .viewall:after {content:'';background:url(../images/arrow.png) no-repeat center;background-color: #02005F;height: 40px;width: 40px;border-radius: 50%;display: flex;-webkit-box-align: center;-ms-flex-align: center;align-items: center;-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;}
+.tabs-content-area .tab-content .tabs-top-area .viewall:after {content:'';background:url(../images/arrow.png) no-repeat center;background-color: #D2AD93;height: 40px;width: 40px;border-radius: 50%;display: flex;-webkit-box-align: center;-ms-flex-align: center;align-items: center;-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;}
 .tabs-content-area .tab-content .tabs-top-area .viewall:hover:after {background-color:#000;}
 .tabs-content-area .tab-content .data-table {width: 100%;table-layout: fixed;border: 0;text-align: center;}
-.tabs-content-area .tab-content .data-table th {background-color: #000000;color: #fff;padding: 12px 0px;font-size: 12px;font-weight: 600;text-transform: uppercase;}
+.tabs-content-area .tab-content .data-table th {background-color: #004236;color: #fff;padding: 12px 0px;font-size: 12px;font-weight: 600;text-transform: uppercase;}
 .tabs-content-area .tab-content .data-table tr:nth-child(even) {background-color: #f7f7f7;}
 .tabs-content-area .tab-content .data-table td {padding: 16px;font-size: 12px;vertical-align: middle;font-weight: 400;}
-.tabs-content-area .tab-content .data-table td:nth-child(1) {color: #02005F;font-weight: 500;}
+
 .tabs-content-area .tab-content .data-table td:nth-child(5) {color: #F13C3C;}
 .tabs-content-area .tab-content .data-table td:nth-child(6) {color: #569D10;}
 .tabs-content-area .tab-content .data-table .table-heading {display: none;}
 
+.grid-options {text-align:right;padding:60px 0 25px;display:flex;align-items: center; justify-content: flex-end;}
+.grid-options .details-btn {color:#004236;display:block;}
 
 .chart-wrapper {padding: 50px 0;}
+.chart-wrapper .chart-options {display:flex; justify-content: space-between; align-items:center;}
+.chart-wrapper .chart-options .details-btn {color:#004236;}
 .chart-wrapper .stock-name {font-size:26px; font-weight:bold; color:#000; margin:0 0 10px;}
 .chart-wrapper .chart-filter {display:flex; justify-content:flex-start; flex-wrap:wrap;}
-.chart-wrapper .chart-filter a {display:flex; align-items:center; justify-content:center; width:44px; padding:8px 5px; font-size:13px; text-decoration:none; color:#8197b6; border:1px solid #eee; margin:0 5px 5px; text-align:center;}
-.chart-wrapper .chart-filter a:hover, .chart-wrapper .chart-filter a.active {color:#02005F}
+.chart-wrapper .chart-filter a {display:flex; align-items:center; justify-content:center; width:44px; padding:8px 5px; font-size:13px; text-decoration:none; color:#A7A7A7; border:1px solid #eee; margin:0 5px 5px; text-align:center;font-weight: 500;}
+.chart-wrapper .chart-filter a:hover, .chart-wrapper .chart-filter a.active {color:#fff;background-color: #D2AD93;}
 
 
 /*  PROMO */
@@ -72,7 +76,7 @@ header .header-wrapper .menu-trigger:hover span:last-child {width: 100%;}
 
 
 /*  FOOTER  */
-footer {padding-top: 47px;background: url(../images/footer.png) no-repeat center #02005f;background-size: cover;}
+footer {padding-top: 47px;background: url(../images/footer.png) no-repeat center #004236;background-size: cover;}
 footer .footer-box h4 {font-size: 16px;font-weight: 600;color: #fff;padding-bottom: 26px;}
 footer .footer-box .nav-link {display: inline-block;font-size: 13px;color: #fff;padding: 0;margin-bottom: 5px;}
 footer .footer-box .form-group {display: -webkit-box;display: -ms-flexbox;display: flex;position: relative;height: 42px;}
@@ -147,7 +151,7 @@ footer .social-icons svg{height: 20px;}
   .tabs-content-area .nav-tabs li {width:100%;margin: 0 !important;}
 
   .tabs-content-area .nav-tabs .nav-item .nav-link{font-size: 16px;border-radius: 5px;text-align:center;border:1px solid #efefef;margin:0 0 6px;font-weight: normal;}
-  .tabs-content-area .nav-tabs .nav-item .nav-link.active{background:#02005F;color:#fff;border-bottom: 1px solid #efefef;}
+  .tabs-content-area .nav-tabs .nav-item .nav-link.active{background:#004236;color:#fff;border-bottom: 1px solid #efefef;}
   .tabs-content-area .tab-content .tabs-top-area h3{font-size: 28px;}
 
   /* Chart */
@@ -171,6 +175,7 @@ footer .social-icons svg{height: 20px;}
   .tabs-content-area .tab-content .tabs-top-area h3{font-size: 20px;}
   .tabs-content-area .tab-content .tabs-top-area .viewall h4{font-size: 13px;}
   .tabs-content-area .tab-content{margin-top: 0;}
+  .chart-wrapper{padding: 30px 0;}
   
 
   .promo {background-position: 30%;}

@@ -24,8 +24,8 @@
                 <div class="logo">
                     <a href="#">
                         <svg xmlns="http://www.w3.org/2000/svg" width="74" viewBox="0 0 74 36">
-                            <text id="LOGO" transform="translate(0 27)" fill="#02005f" font-size="26" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="0" y="0">LO</tspan><tspan y="0" fill="#071873">GO</tspan></text>
-                        </svg>                          
+                            <text id="LOGO" transform="translate(0 27)" fill="#004236" font-size="26" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="0" y="0">LOGO</tspan></text>
+                        </svg>                                                   
                     </a>
                 </div>
                 <div class="main-menu" id="mobileMenu">
@@ -34,12 +34,12 @@
                             <img src="assets/images/cancel.svg" alt="">
                         </div>
                         <ul class="nav">
-                            <li><a href="" class="nav-link">Markets</a></li>
-                            <li><a href="" class="nav-link">News</a></li>
-                            <li><a href="" class="nav-link">Graph</a></li>
-                            <li><a href="" class="nav-link">Data</a></li>
-                            <li><a href="" class="nav-link">Analysis</a></li>
-                            <li><a href="" class="nav-link">Tools</a></li>
+                            <li><a href="#" class="nav-link">Markets</a></li>
+                            <li><a href="#" class="nav-link">News</a></li>
+                            <li><a href="#" class="nav-link">Graph</a></li>
+                            <li><a href="#" class="nav-link">Data</a></li>
+                            <li><a href="#" class="nav-link">Analysis</a></li>
+                            <li><a href="#" class="nav-link">Tools</a></li>
                         </ul>
                     </div>
                 </div>
@@ -99,7 +99,31 @@
                             </a>
                         </div>
 
-                        <div class="table-responsive">
+
+                        <div class="chart-wrapper">
+							<div class="chart-options">
+								<div class="chart-filter">
+									<a href="#" class="active"><span>1M</span></a>
+									<a href="#"><span>6M</span></a>
+									<a href="#"><span>1W</span></a>
+									<a href="#"><span>1D</span></a>
+									<a href="#"><span>4H</span></a>
+									<a href="#"><span>1H</span></a>
+									<a href="#"><span>30M</span></a>
+								</div>
+
+								<a href="#" class="details-btn" id="detailsBtn">See Details</a>
+							</div>
+                            <figure class="highcharts-figure">
+                                <div id="container"></div>
+                            </figure>
+                        </div>
+
+                        <div class="table-responsive" id="dataTable" style="display:none;">
+							<div class="grid-options">
+								<a href="#" class="details-btn">See Chart</a>
+							</div>
+
                             <table class="data-table">
                                 <thead>
                                     <tr>
@@ -674,22 +698,7 @@
                         </div>
                         <!--TABLE SECTION-->
 
-                        <div class="chart-wrapper">
-                            <h3 class="stock-name">Goog</h3>
-
-                            <div class="chart-filter">
-                                <a href="#" class="active"><span>1M</span></a>
-                                <a href="#"><span>6M</span></a>
-                                <a href="#"><span>1W</span></a>
-                                <a href="#"><span>1D</span></a>
-                                <a href="#"><span>4H</span></a>
-                                <a href="#"><span>1H</span></a>
-                                <a href="#"><span>30M</span></a>
-                            </div>
-                            <figure class="highcharts-figure">
-                                <div id="container"></div>
-                            </figure>
-                        </div>
+                      
                     </div>
 
                     <div id="secondtab" class="container tab-pane fade"><br>
@@ -700,6 +709,593 @@
                                 <span>View All</span>
                             </a>
                         </div>
+                        <div class="table-responsive" id="dataTable">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Ticker</th>
+                                        <th>simfinid</th>
+                                        <th>date</th>
+                                        <th>open</th>
+                                        <th>low</th>
+                                        <th>high</th>
+                                        <th>close</th>
+                                        <th>adj.close</th>
+                                        <th>dividend</th>
+                                        <th>volume</th>
+                                        <th>shares outstanding</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <span class="table-heading">Ticker</span>
+                                            GOOG
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">simfinid</span>
+                                            18
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">date</span>
+                                            2021-09-01
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">open</span>
+                                            2875.97
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">low</span>
+                                            2821.23
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">high</span>
+                                            2821.23
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">close</span>
+                                            2875.97
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">adj.close</span>
+                                            2875.97
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">dividend</span>
+                                            -
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">volume</span>
+                                            2913713
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">shares outstanding</span>
+                                            670163793
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="table-heading">Ticker</span>
+                                            GOOG
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">simfinid</span>
+                                            18
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">date</span>
+                                            2021-09-01
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">open</span>
+                                            2875.97
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">low</span>
+                                            2821.23
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">high</span>
+                                            2821.23
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">close</span>
+                                            2875.97
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">adj.close</span>
+                                            2875.97
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">dividend</span>
+                                            -
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">volume</span>
+                                            2913713
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">shares outstanding</span>
+                                            670163793
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="table-heading">Ticker</span>
+                                            GOOG
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">simfinid</span>
+                                            18
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">date</span>
+                                            2021-09-01
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">open</span>
+                                            2875.97
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">low</span>
+                                            2821.23
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">high</span>
+                                            2821.23
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">close</span>
+                                            2875.97
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">adj.close</span>
+                                            2875.97
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">dividend</span>
+                                            -
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">volume</span>
+                                            2913713
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">shares outstanding</span>
+                                            670163793
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="table-heading">Ticker</span>
+                                            GOOG
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">simfinid</span>
+                                            18
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">date</span>
+                                            2021-09-01
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">open</span>
+                                            2875.97
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">low</span>
+                                            2821.23
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">high</span>
+                                            2821.23
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">close</span>
+                                            2875.97
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">adj.close</span>
+                                            2875.97
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">dividend</span>
+                                            -
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">volume</span>
+                                            2913713
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">shares outstanding</span>
+                                            670163793
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="table-heading">Ticker</span>
+                                            GOOG
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">simfinid</span>
+                                            18
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">date</span>
+                                            2021-09-01
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">open</span>
+                                            2875.97
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">low</span>
+                                            2821.23
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">high</span>
+                                            2821.23
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">close</span>
+                                            2875.97
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">adj.close</span>
+                                            2875.97
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">dividend</span>
+                                            -
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">volume</span>
+                                            2913713
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">shares outstanding</span>
+                                            670163793
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="table-heading">Ticker</span>
+                                            GOOG
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">simfinid</span>
+                                            18
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">date</span>
+                                            2021-09-01
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">open</span>
+                                            2875.97
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">low</span>
+                                            2821.23
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">high</span>
+                                            2821.23
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">close</span>
+                                            2875.97
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">adj.close</span>
+                                            2875.97
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">dividend</span>
+                                            -
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">volume</span>
+                                            2913713
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">shares outstanding</span>
+                                            670163793
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="table-heading">Ticker</span>
+                                            GOOG
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">simfinid</span>
+                                            18
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">date</span>
+                                            2021-09-01
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">open</span>
+                                            2875.97
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">low</span>
+                                            2821.23
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">high</span>
+                                            2821.23
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">close</span>
+                                            2875.97
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">adj.close</span>
+                                            2875.97
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">dividend</span>
+                                            -
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">volume</span>
+                                            2913713
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">shares outstanding</span>
+                                            670163793
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="table-heading">Ticker</span>
+                                            GOOG
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">simfinid</span>
+                                            18
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">date</span>
+                                            2021-09-01
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">open</span>
+                                            2875.97
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">low</span>
+                                            2821.23
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">high</span>
+                                            2821.23
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">close</span>
+                                            2875.97
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">adj.close</span>
+                                            2875.97
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">dividend</span>
+                                            -
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">volume</span>
+                                            2913713
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">shares outstanding</span>
+                                            670163793
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="table-heading">Ticker</span>
+                                            GOOG
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">simfinid</span>
+                                            18
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">date</span>
+                                            2021-09-01
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">open</span>
+                                            2875.97
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">low</span>
+                                            2821.23
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">high</span>
+                                            2821.23
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">close</span>
+                                            2875.97
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">adj.close</span>
+                                            2875.97
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">dividend</span>
+                                            -
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">volume</span>
+                                            2913713
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">shares outstanding</span>
+                                            670163793
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="table-heading">Ticker</span>
+                                            GOOG
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">simfinid</span>
+                                            18
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">date</span>
+                                            2021-09-01
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">open</span>
+                                            2875.97
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">low</span>
+                                            2821.23
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">high</span>
+                                            2821.23
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">close</span>
+                                            2875.97
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">adj.close</span>
+                                            2875.97
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">dividend</span>
+                                            -
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">volume</span>
+                                            2913713
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">shares outstanding</span>
+                                            670163793
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="table-heading">Ticker</span>
+                                            GOOG
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">simfinid</span>
+                                            18
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">date</span>
+                                            2021-09-01
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">open</span>
+                                            2875.97
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">low</span>
+                                            2821.23
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">high</span>
+                                            2821.23
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">close</span>
+                                            2875.97
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">adj.close</span>
+                                            2875.97
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">dividend</span>
+                                            -
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">volume</span>
+                                            2913713
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">shares outstanding</span>
+                                            670163793
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="table-heading">Ticker</span>
+                                            GOOG
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">simfinid</span>
+                                            18
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">date</span>
+                                            2021-09-01
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">open</span>
+                                            2875.97
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">low</span>
+                                            2821.23
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">high</span>
+                                            2821.23
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">close</span>
+                                            2875.97
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">adj.close</span>
+                                            2875.97
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">dividend</span>
+                                            -
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">volume</span>
+                                            2913713
+                                        </td>
+                                        <td>
+                                            <span class="table-heading">shares outstanding</span>
+                                            670163793
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!--TABLE SECTION-->
+                    </div>
+
+
+                    <div id="thirdtab" class="container tab-pane fade"><br>
+                      <!--TABLE SECTION-->
+                      <div class="tabs-top-area">
+                        <h3>US Shareprices</h3>
+                        <a href="#" class="viewall">
+                            <span>View All</span>
+                        </a>
+                      </div>
+					  
+                      <div class="table-responsive" id="dataTable">
                         <table class="data-table">
                             <thead>
                                 <tr>
@@ -1271,589 +1867,7 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <!--TABLE SECTION-->
-                    </div>
-
-
-                    <div id="thirdtab" class="container tab-pane fade"><br>
-                      <!--TABLE SECTION-->
-                      <div class="tabs-top-area">
-                        <h3>US Shareprices</h3>
-                        <a href="#" class="viewall">
-                            <span>View All</span>
-                        </a>
                       </div>
-                      <table class="data-table">
-                          <thead>
-                              <tr>
-                                  <th>Ticker</th>
-                                  <th>simfinid</th>
-                                  <th>date</th>
-                                  <th>open</th>
-                                  <th>low</th>
-                                  <th>high</th>
-                                  <th>close</th>
-                                  <th>adj.close</th>
-                                  <th>dividend</th>
-                                  <th>volume</th>
-                                  <th>shares outstanding</th>
-                              </tr>
-                          </thead>
-                          <tbody>
-                              <tr>
-                                  <td>
-                                      <span class="table-heading">Ticker</span>
-                                      GOOG
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">simfinid</span>
-                                      18
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">date</span>
-                                      2021-09-01
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">open</span>
-                                      2875.97
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">low</span>
-                                      2821.23
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">high</span>
-                                      2821.23
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">close</span>
-                                      2875.97
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">adj.close</span>
-                                      2875.97
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">dividend</span>
-                                      -
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">volume</span>
-                                      2913713
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">shares outstanding</span>
-                                      670163793
-                                  </td>
-                              </tr>
-                              <tr>
-                                  <td>
-                                      <span class="table-heading">Ticker</span>
-                                      GOOG
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">simfinid</span>
-                                      18
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">date</span>
-                                      2021-09-01
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">open</span>
-                                      2875.97
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">low</span>
-                                      2821.23
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">high</span>
-                                      2821.23
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">close</span>
-                                      2875.97
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">adj.close</span>
-                                      2875.97
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">dividend</span>
-                                      -
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">volume</span>
-                                      2913713
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">shares outstanding</span>
-                                      670163793
-                                  </td>
-                              </tr>
-                              <tr>
-                                  <td>
-                                      <span class="table-heading">Ticker</span>
-                                      GOOG
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">simfinid</span>
-                                      18
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">date</span>
-                                      2021-09-01
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">open</span>
-                                      2875.97
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">low</span>
-                                      2821.23
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">high</span>
-                                      2821.23
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">close</span>
-                                      2875.97
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">adj.close</span>
-                                      2875.97
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">dividend</span>
-                                      -
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">volume</span>
-                                      2913713
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">shares outstanding</span>
-                                      670163793
-                                  </td>
-                              </tr>
-                              <tr>
-                                  <td>
-                                      <span class="table-heading">Ticker</span>
-                                      GOOG
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">simfinid</span>
-                                      18
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">date</span>
-                                      2021-09-01
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">open</span>
-                                      2875.97
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">low</span>
-                                      2821.23
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">high</span>
-                                      2821.23
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">close</span>
-                                      2875.97
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">adj.close</span>
-                                      2875.97
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">dividend</span>
-                                      -
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">volume</span>
-                                      2913713
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">shares outstanding</span>
-                                      670163793
-                                  </td>
-                              </tr>
-                              <tr>
-                                  <td>
-                                      <span class="table-heading">Ticker</span>
-                                      GOOG
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">simfinid</span>
-                                      18
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">date</span>
-                                      2021-09-01
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">open</span>
-                                      2875.97
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">low</span>
-                                      2821.23
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">high</span>
-                                      2821.23
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">close</span>
-                                      2875.97
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">adj.close</span>
-                                      2875.97
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">dividend</span>
-                                      -
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">volume</span>
-                                      2913713
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">shares outstanding</span>
-                                      670163793
-                                  </td>
-                              </tr>
-                              <tr>
-                                  <td>
-                                      <span class="table-heading">Ticker</span>
-                                      GOOG
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">simfinid</span>
-                                      18
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">date</span>
-                                      2021-09-01
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">open</span>
-                                      2875.97
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">low</span>
-                                      2821.23
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">high</span>
-                                      2821.23
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">close</span>
-                                      2875.97
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">adj.close</span>
-                                      2875.97
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">dividend</span>
-                                      -
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">volume</span>
-                                      2913713
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">shares outstanding</span>
-                                      670163793
-                                  </td>
-                              </tr>
-                              <tr>
-                                  <td>
-                                      <span class="table-heading">Ticker</span>
-                                      GOOG
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">simfinid</span>
-                                      18
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">date</span>
-                                      2021-09-01
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">open</span>
-                                      2875.97
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">low</span>
-                                      2821.23
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">high</span>
-                                      2821.23
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">close</span>
-                                      2875.97
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">adj.close</span>
-                                      2875.97
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">dividend</span>
-                                      -
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">volume</span>
-                                      2913713
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">shares outstanding</span>
-                                      670163793
-                                  </td>
-                              </tr>
-                              <tr>
-                                  <td>
-                                      <span class="table-heading">Ticker</span>
-                                      GOOG
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">simfinid</span>
-                                      18
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">date</span>
-                                      2021-09-01
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">open</span>
-                                      2875.97
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">low</span>
-                                      2821.23
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">high</span>
-                                      2821.23
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">close</span>
-                                      2875.97
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">adj.close</span>
-                                      2875.97
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">dividend</span>
-                                      -
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">volume</span>
-                                      2913713
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">shares outstanding</span>
-                                      670163793
-                                  </td>
-                              </tr>
-                              <tr>
-                                  <td>
-                                      <span class="table-heading">Ticker</span>
-                                      GOOG
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">simfinid</span>
-                                      18
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">date</span>
-                                      2021-09-01
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">open</span>
-                                      2875.97
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">low</span>
-                                      2821.23
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">high</span>
-                                      2821.23
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">close</span>
-                                      2875.97
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">adj.close</span>
-                                      2875.97
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">dividend</span>
-                                      -
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">volume</span>
-                                      2913713
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">shares outstanding</span>
-                                      670163793
-                                  </td>
-                              </tr>
-                              <tr>
-                                  <td>
-                                      <span class="table-heading">Ticker</span>
-                                      GOOG
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">simfinid</span>
-                                      18
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">date</span>
-                                      2021-09-01
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">open</span>
-                                      2875.97
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">low</span>
-                                      2821.23
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">high</span>
-                                      2821.23
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">close</span>
-                                      2875.97
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">adj.close</span>
-                                      2875.97
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">dividend</span>
-                                      -
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">volume</span>
-                                      2913713
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">shares outstanding</span>
-                                      670163793
-                                  </td>
-                              </tr>
-                              <tr>
-                                  <td>
-                                      <span class="table-heading">Ticker</span>
-                                      GOOG
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">simfinid</span>
-                                      18
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">date</span>
-                                      2021-09-01
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">open</span>
-                                      2875.97
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">low</span>
-                                      2821.23
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">high</span>
-                                      2821.23
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">close</span>
-                                      2875.97
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">adj.close</span>
-                                      2875.97
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">dividend</span>
-                                      -
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">volume</span>
-                                      2913713
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">shares outstanding</span>
-                                      670163793
-                                  </td>
-                              </tr>
-                              <tr>
-                                  <td>
-                                      <span class="table-heading">Ticker</span>
-                                      GOOG
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">simfinid</span>
-                                      18
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">date</span>
-                                      2021-09-01
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">open</span>
-                                      2875.97
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">low</span>
-                                      2821.23
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">high</span>
-                                      2821.23
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">close</span>
-                                      2875.97
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">adj.close</span>
-                                      2875.97
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">dividend</span>
-                                      -
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">volume</span>
-                                      2913713
-                                  </td>
-                                  <td>
-                                      <span class="table-heading">shares outstanding</span>
-                                      670163793
-                                  </td>
-                              </tr>
-                          </tbody>
-                      </table>
                       <!--TABLE SECTION-->
                     </div>
                   </div>
@@ -1924,69 +1938,99 @@
         </div>
     </footer>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <style>
         .highcharts-plot-background {fill: #f6f5fa !important;}
+
     </style>
+   
+
     <script>
-        Highcharts.chart('container', {
-            chart: {
-                type: 'spline',
-                scrollablePlotArea: {
-                    minWidth: 600,
-                    scrollPositionX: 1
-                }
-            },
-            legend:{ enabled:false },
-            title: {
-                text: null,
-            },
-            subtitle: {
-                text: null,
-            },
-            xAxis: {
-                type: 'datetime',
-                labels: {
-                    overflow: 'justify'
-                },
-                fillColor: '#ffff00',
-                alternateGridColor: '#d2d1ff',
-                lineWidth: 0,
-                minorGridLineWidth: 0,
-                lineColor: 'transparent',
-                categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-            },
-            yAxis: {
-                title: null,
-                labels: {
-                    enabled:false
-                },
-                opposite:true,
-                gridLineWidth:0,
-            },
-            plotOptions: {
-                spline: {
-                    dataLabels: {
-                        enabled: true
-                    },
-                    color:"#02005F",
-                    lineColor: "#02005F",
-                    lineWidth: 1,
-                    marker: {
-                        fillColor: '#02005F'
-                    }
-                }
-            },
-            series: [{
-                name: 'Hestavollane',
-                data: [3800, 3200, 4200, 4000, 2800, 3000, 2400]
-            }]
-            
-        });
+
+		$.ajax({
+			url: "data.json",
+			cache: false,
+			success: function(res){
+				console.log("res", res);
+
+				prepareChart(res);
+			}
+		});
+
+		function prepareChart(data){
+			Highcharts.chart('container', {
+				chart: {
+					zoomType: 'x'
+				},
+				title: {
+					text: 'Goog'
+				},
+				xAxis: {
+					type: 'datetime'
+				},
+				yAxis: {
+					title: {
+						text: 'Value'
+					}
+				},
+				legend: {
+					enabled: false
+				},
+				plotOptions: {
+					area: {
+						fillColor: {
+							linearGradient: {
+								x1: 0,
+								y1: 0,
+								x2: 0,
+								y2: 1
+							},
+							stops: [
+								[0, Highcharts.getOptions().colors[0]],
+								[1, Highcharts.color(Highcharts.getOptions().colors[0]).setOpacity(0).get('rgba')]
+							]
+						},
+						marker: {
+							radius: 2
+						},
+						lineWidth: 1,
+						states: {
+							hover: {
+								lineWidth: 1
+							}
+						},
+						threshold: null
+					}
+				},
+				series: [{
+					type: 'area',
+					name: 'Goog - 5968712',
+					data: data
+				}]
+			});
+		}
+     
+		$(document).on('click', '.details-btn', function(){
+			$('#dataTable').toggle();
+			$('.chart-wrapper').toggle();
+
+			return false;
+		});
+
 
         function menu(){
             document.getElementById('mobileMenu').classList.toggle('active')
         }
+
+        $(document).ready(function(){
+            $("tr").click(function() {
+                $('html, body').animate({
+                    scrollTop: $(".chart-wrapper").offset().top
+                }, 1000);
+            });
+        });
+     
     </script>
 </body>
 </html>
