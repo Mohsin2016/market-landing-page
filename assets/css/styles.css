@@ -65,7 +65,7 @@ header .header-wrapper .menu-trigger:hover span:last-child {width: 100%;}
 
 .chart-wrapper {padding: 50px 0;}
 .chart-wrapper .chart-options {display:flex; justify-content: space-between; align-items:center;}
-.chart-wrapper .chart-options .details-btn {color:#004236;}
+.chart-wrapper .chart-options .details-btn {color:#000000;}
 .chart-wrapper .stock-name {font-size:26px; font-weight:bold; color:#000; margin:0 0 10px;}
 .chart-wrapper .chart-filter {display:flex; justify-content:flex-start; flex-wrap:wrap;}
 .chart-wrapper .chart-filter a {display:flex; align-items:center; justify-content:center; width:44px; padding:8px 5px; font-size:13px; text-decoration:none; color:#A7A7A7; border:1px solid #eee; margin:0 5px 5px; text-align:center;font-weight: 500;}
