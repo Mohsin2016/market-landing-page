@@ -42,7 +42,7 @@ header .header-wrapper .menu-trigger:hover span:last-child {width: 100%;}
 .markets .tabs-content-area {margin-top: 45px;}
 .tabs-content-area .nav-tabs {border: none;display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;border-bottom: 1px solid #e5e5e5;}
 .tabs-content-area .nav-tabs .nav-item .nav-link {border: none;font-size: 18px;font-weight: 600;color: #A7A7A7;padding-bottom: 10px;}
-.tabs-content-area .nav-tabs .nav-item .nav-link.active {color: #004236;border-bottom: 2px solid #CC5631;}
+.tabs-content-area .nav-tabs .nav-item .nav-link.active {color: #000000;border-bottom: 2px solid #CC5631;}
 .tabs-content-area .nav-tabs .nav-item:nth-child(n+2) {margin-left: 103px;}
 .tabs-content-area .tab-content {margin-top: 60px;}
 .tabs-content-area .tab-content .tabs-top-area {display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-pack: justify;-ms-flex-pack: justify;justify-content: space-between;}
