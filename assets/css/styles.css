@@ -61,7 +61,7 @@ header .header-wrapper .menu-trigger:hover span:last-child {width: 100%;}
 .tabs-content-area .tab-content .data-table .table-heading {display: none;}
 
 .grid-options {text-align:right;padding:60px 0 25px;display:flex;align-items: center; justify-content: flex-end;}
-.grid-options .details-btn {color:#004236;display:block;}
+.grid-options .details-btn {color:#000000;display:block;}
 
 .chart-wrapper {padding: 50px 0;}
 .chart-wrapper .chart-options {display:flex; justify-content: space-between; align-items:center;}
