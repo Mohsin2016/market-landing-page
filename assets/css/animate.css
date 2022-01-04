@@ -1,4 +1,4 @@
-.markets-section,.promo-fade,.title-banner,.footer-box{opacity: 0;transition: 0.5s ease-in-out;}
+.markets-section,.promo-fade,.title-banner,.footer-box,.tabs-content-area{opacity: 0;transition: 0.5s ease-in-out;}
 
-.markets-section.animated ,.promo-fade.animated,.title-banner.animated,.footer-box.animated{opacity: 1;transition: 0.4s ease-in-out;}
+.markets-section.animated,.promo-fade.animated,.title-banner.animated,.footer-box.animated,.tabs-content-area.animated{opacity: 1;transition: 0.4s ease-in-out;animation-duration: 2s;}
   
