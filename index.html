@@ -10,8 +10,12 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.highcharts.com/highcharts.js"></script>
+    <!-- for Animation  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!--CSS-->
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
     <!--FONT FAMILY-->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
@@ -24,8 +28,8 @@
                 <div class="logo">
                     <a href="#">
                         <svg xmlns="http://www.w3.org/2000/svg" width="74" viewBox="0 0 74 36">
-                            <text id="LOGO" transform="translate(0 27)" fill="#cc5631" font-size="26" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="0" y="0">LOGO</tspan></text>
-                        </svg>                                                     
+                            <text id="LOGO" transform="translate(0 27)" fill="#1d4354" font-size="26" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="0" y="0">LOGO</tspan></text>
+                        </svg>                                                  
                     </a>
                 </div>
                 <div class="main-menu" id="mobileMenu">
@@ -58,10 +62,10 @@
         <div class="container">
             <div class="banner-wrapper">
                 <div class="title">
-                    <h1>Topest trade <br> markets</h1>
+                    <h1 class="title-banner">Topest trade <br> markets</h1>
                 </div>
-                <div class="meta">
-                    <p>It is a long established fact that a reader will be <br> distracted by the readable.</p>
+                <div class="meta title-banner">
+                    <p class="title-banner">It is a long established fact that a reader will be <br> distracted by the readable.</p>
                 </div>
             </div>
         </div>
@@ -69,7 +73,7 @@
 
 
     <!--MARKETS SECTION-->
-    <section class="markets">
+    <section class="markets markets-section">
         <div class="container">
             <div class="market-topdetail">
                 <h2>All Markets</h2>
@@ -1880,7 +1884,7 @@
 
     <!--PROMO-->
 
-    <section class="promo" style="background-image: url(./assets/images/promo.png);">
+    <section class="promo promo-fade" style="background-image: url(./assets/images/promo.png);">
 
     </section>
 
@@ -1939,10 +1943,10 @@
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js" integrity="sha512-CEiA+78TpP9KAIPzqBvxUv8hy41jyI3f2uHi7DGp/Y/Ka973qgSdybNegWFciqh6GrN2UePx2KkflnQUbUhNIA==" crossorigin="anonymous"></script>
 
     <style>
         .highcharts-plot-background {fill: #f6f5fa !important;}
-
     </style>
    
 
@@ -2031,7 +2035,29 @@
                     scrollTop: $(".chart-wrapper").offset().top
                 }, 1000);
             });
+            $('.markets-section').waypoint(function(direction){
+                $('.markets-section').addClass('animated fadeIn')
+            }, {
+                offset: '80%'
+            })  
+            $('.promo-fade').waypoint(function(direction){
+                $('.promo-fade').addClass('animated fadeIn')
+            }, {
+                offset: '70%'
+            }) 
+            $('.title-banner').waypoint(function(direction){
+                $('.title-banner').addClass('animated fadeIn')
+            }, {
+                offset: '50%'
+            })
+            $('.footer-box').waypoint(function(direction){
+                $('.footer-box').addClass('animated fadeIn')
+            }, {
+                offset: '80%'
+            })         
         });
+
+       
      
     </script>
 </body>
