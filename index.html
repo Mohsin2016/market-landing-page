@@ -10,9 +10,10 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.highcharts.com/highcharts.js"></script>
-    <!-- for Animation  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     <!-- for Animation  -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"/>
     <!--CSS-->
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/animate.css">
@@ -122,6 +123,7 @@
                                 <div id="container"></div>
                             </figure>
                         </div>
+                        <script src="JS\Highcharts_Bar_02.js"></script>
 
                         <div class="table-responsive" id="dataTable" style="display:none;">
 							<div class="grid-options">
@@ -1966,11 +1968,12 @@
 
 		function prepareChart(data){
 			Highcharts.chart('container', {
+                
 				chart: {
-					zoomType: 'x'
+					zoomType: 'x',
 				},
 				title: {
-					text: 'Goog'
+					text: 'Goog',
 				},
 				xAxis: {
 					type: 'datetime'
@@ -2012,8 +2015,7 @@
 				series: [{
 					type: 'area',
 					name: 'Goog - 5968712',
-					data: data, 
-					color: '#14a800'
+					data: data
 				}]
 			});
 		}
@@ -2027,32 +2029,32 @@
 
 
         function menu(){
-            document.getElementById('mobileMenu').classList.toggle('active')
+            document.getElementById('mobileMenu').classList.toggle('active');
         }
 
         $(document).ready(function(){
-            $("tr").click(function() {
-                $('html, body').animate({
-                    scrollTop: $(".chart-wrapper").offset().top
-                }, 1000);
-            });
             $('.markets-section').waypoint(function(direction){
-                $('.markets-section').addClass('animated fadeIn')
+                $('.markets-section').addClass('animated fadeInUpBig')
             }, {
                 offset: '80%'
             })  
             $('.promo-fade').waypoint(function(direction){
-                $('.promo-fade').addClass('animated fadeIn')
+                $('.promo-fade').addClass('animated fadeInUpBig')
             }, {
-                offset: '70%'
+                offset: '80%'
             }) 
             $('.title-banner').waypoint(function(direction){
-                $('.title-banner').addClass('animated fadeIn')
+                $('.title-banner').addClass('animated fadeInDown')
             }, {
                 offset: '50%'
             })
             $('.footer-box').waypoint(function(direction){
-                $('.footer-box').addClass('animated fadeIn')
+                $('.footer-box').addClass('animated fadeInUpBig')
+            }, {
+                offset: '50%'
+            })  
+            $('.tabs-content-area').waypoint(function(direction){
+                $('.tabs-content-area').addClass('animated fadeInUpBig')
             }, {
                 offset: '80%'
             })         
