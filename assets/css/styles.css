@@ -182,4 +182,8 @@ footer .social-icons svg{height: 20px;}
   
 
   .promo {background-position: 30%;}
+  
+  footer .footer-bottom {
+    margin-top: 25px;
+  }
 }
