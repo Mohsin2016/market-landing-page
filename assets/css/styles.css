@@ -154,7 +154,7 @@ footer .social-icons svg{height: 20px;}
   .tabs-content-area .nav-tabs li {width:100%;margin: 0 !important;}
 
   .tabs-content-area .nav-tabs .nav-item .nav-link{font-size: 16px;border-radius: 5px;text-align:center;border:1px solid #efefef;margin:0 0 6px;font-weight: normal;}
-  .tabs-content-area .nav-tabs .nav-item .nav-link.active{background:#1D4354;color:#fff;border-bottom: 1px solid #efefef;}
+  .tabs-content-area .nav-tabs .nav-item .nav-link.active{background:#14a800;color:#fff;border-bottom: 1px solid #efefef;}
   .tabs-content-area .tab-content .tabs-top-area h3{font-size: 28px;}
 
   /* Chart */
