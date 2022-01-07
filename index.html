@@ -131,10 +131,6 @@
                             </figure>
                         </div>
                         <script src="JS\Highcharts_Bar_02.js"></script>
-
-                        <div class="table-responsive">
-                            <table id="datatableGrid" class="table table-striped" width="100%"></table>
-                        </div>
                         
                         <div class="table-responsive" id="dataTable" style="display:none;">
 							<div class="grid-options">
@@ -1962,23 +1958,22 @@
     <script src="https://rawgit.com/mholt/PapaParse/master/papaparse.js"></script>
 
     <script>
-        var csv = null;
-
-        function getTableData(remote_url) {
+        function getGraphData(data){
             $.ajax({
-                url:'data/us-shareprices-latest.csv',
+                url:data,
                 type: 'get',
                 dataType: 'text',
                 success: function(data) {
-                    // var data1 = csvJSON(data);
-                    // console.log("data1", data1);
-                    csv = Papa.parse(data);
-                    csv = csv.data;
-                    csv.shift();
-                    csv.pop();
-                    
-                    console.log(csv);
-                    prepareDatatable(csv);
+                    var graphData = Papa.parse(data);
+                    var graphData = graphData.data;
+
+                    graphData = graphData.map(function(item, i){
+                        return [new Date(item[0]).getTime(), parseFloat(item[1])]
+                    })
+
+                    console.log("graphData", graphData);
+
+                    prepareHighChart(graphData);
                     
                 },
                 error: function(jqXHR, textStatus, errorThrow){
@@ -1986,41 +1981,18 @@
                 }
             })
         }
-
-        function prepareDatatable(dataSet){
-            console.log("dataset", dataSet);
-            $('#datatableGrid').DataTable( {
-                data: dataSet,
-                columns: [
-                    { title: "Ticker" },
-                    { title: "simfinid" },
-                    { title: "date" },
-                    { title: "open" },
-                    { title: "low" },
-                    { title: "high" },
-                    { title: "close" },
-                    { title: "adj.close" },
-                    { title: "dividend" },
-                    { title: "volume" },
-                    { title: "shares outstanding" }
-                ]
-            });
-        }
-
-        getTableData();
-
-
-        Highcharts.getJSON('https://demo-live-data.highcharts.com/aapl-c.json', function (data) {
+        
+        function prepareHighChart(data){
             // Create the chart
             Highcharts.stockChart('container', {
                 rangeSelector: {
                     selected: 1
                 },
                 title: {
-                    text: 'AAPL Stock Price'
+                    text: 'DJIA Stock Price'
                 },
                 series: [{
-                    name: 'AAPL',
+                    name: 'DJIA',
                     data: data,
                     color:'#14a800',
                     tooltip: {
@@ -2028,7 +2000,30 @@
                     }
                 }]
             });
-        });
+        }
+
+        getGraphData('data/DJIA.csv');
+
+
+        // Highcharts.getJSON('https://demo-live-data.highcharts.com/aapl-c.json', function (data) {
+        //     // Create the chart
+        //     Highcharts.stockChart('container', {
+        //         rangeSelector: {
+        //             selected: 1
+        //         },
+        //         title: {
+        //             text: 'AAPL Stock Price'
+        //         },
+        //         series: [{
+        //             name: 'AAPL',
+        //             data: data,
+        //             color:'#14a800',
+        //             tooltip: {
+        //                 valueDecimals: 2
+        //             }
+        //         }]
+        //     });
+        // });
                 
      
 		$(document).on('click', '.details-btn', function(){
