@@ -130,8 +130,7 @@
                                 <div id="container"></div>
                             </figure>
                         </div>
-                        <script src="JS\Highcharts_Bar_02.js"></script>
-                        
+                                                
                         <div class="table-responsive" id="dataTable" style="display:none;">
 							<div class="grid-options">
 								<a href="Javascript:void(0)" class="details-btn">See Chart</a>
@@ -1968,13 +1967,11 @@
                     var graphData = graphData.data;
 
                     graphData = graphData.map(function(item, i){
+                        console.log("item",i, item);
                         return [new Date(item[0]).getTime(), parseFloat(item[1])]
                     })
 
-                    console.log("graphData", graphData);
-
-                    prepareHighChart(graphData);
-                    
+                    prepareHighChart(graphData);                    
                 },
                 error: function(jqXHR, textStatus, errorThrow){
                     console.log(jqXHR['responseText']);
