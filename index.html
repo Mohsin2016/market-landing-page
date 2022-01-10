@@ -1967,7 +1967,7 @@
                     var graphData = graphData.data;
 
                     graphData = graphData.map(function(item, i){
-                        return [new Date(item[0]).getTime(), parseFloat(item[1])]
+                        return [new Date(item[0]).getTime(), parseFloat(item[1] == "." ? graphData[i-1][1] : item[1])]
                     });
 
                     console.log("data", graphData);
