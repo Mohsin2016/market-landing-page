@@ -1967,9 +1967,10 @@
                     var graphData = graphData.data;
 
                     graphData = graphData.map(function(item, i){
-                        console.log("item",i, item);
                         return [new Date(item[0]).getTime(), parseFloat(item[1])]
-                    })
+                    });
+
+                    console.log("data", graphData);
 
                     prepareHighChart(graphData);                    
                 },
@@ -1981,7 +1982,11 @@
         
         function prepareHighChart(data){
             // Create the chart
-            Highcharts.stockChart('container', {
+            Highcharts.stockChart({
+                chart: {
+                    renderTo: 'container',
+                    zoomType: 'xy'
+                },
                 rangeSelector: {
                     selected: 1
                 },
@@ -1990,6 +1995,7 @@
                 },
                 series: [{
                     name: 'DJIA',
+                    zoomType: 'xy',
                     data: data,
                     color:'#14a800',
                     tooltip: {
@@ -2000,27 +2006,6 @@
         }
 
         getGraphData('data/DJIA.csv');
-
-
-        // Highcharts.getJSON('https://demo-live-data.highcharts.com/aapl-c.json', function (data) {
-        //     // Create the chart
-        //     Highcharts.stockChart('container', {
-        //         rangeSelector: {
-        //             selected: 1
-        //         },
-        //         title: {
-        //             text: 'AAPL Stock Price'
-        //         },
-        //         series: [{
-        //             name: 'AAPL',
-        //             data: data,
-        //             color:'#14a800',
-        //             tooltip: {
-        //                 valueDecimals: 2
-        //             }
-        //         }]
-        //     });
-        // });
                 
      
 		$(document).on('click', '.details-btn', function(){
