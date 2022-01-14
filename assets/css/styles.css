@@ -8,7 +8,7 @@
 }
 
 body {font-family: 'Poppins', sans-serif;}
-.container{max-width: 1264px;}
+.container{max-width: 1170px;}
 
 /*  HEADER  */
 header {}
@@ -43,10 +43,11 @@ header .header-wrapper .menu-trigger:hover span:last-child {width: 100%;}
 .tabs-content-area .nav-tabs {border: none;display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;border-bottom: 1px solid #e5e5e5;}
 .tabs-content-area .nav-tabs .nav-item .nav-link {border: none;font-size: 15px;font-weight: 600;color: #A7A7A7;padding-bottom: 10px;}
 .tabs-content-area .nav-tabs .nav-item .nav-link.active {color: #14a800;border-bottom: 2px solid #14a800;}
+.tabs-content-area .tab-content .container{padding: 0;}
 .tabs-content-area .nav-tabs .nav-item .nav-link:hover {color:#000;}
 .tabs-content-area .nav-tabs .nav-item:nth-child(n+2) {margin-left: 103px;}
 .tabs-content-area .tab-content {margin-top: 20px;}
-.tabs-content-area .tab-content .tabs-top-area {display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-pack: justify;-ms-flex-pack: justify;justify-content: space-between;}
+.tabs-content-area .tab-content .tabs-top-area {display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-pack: justify;-ms-flex-pack: justify;justify-content: space-between;padding: 0;}
 .tabs-content-area .tab-content .tabs-top-area h3 {font-size: 24px;line-height: 53px;color: #000000;font-weight: 600;}
 .tabs-content-area .tab-content .tabs-top-area .viewall {display: flex;align-items: center; text-decoration: none;}
 .tabs-content-area .tab-content .tabs-top-area .viewall span {margin-bottom: 0;font-size: 15px;font-weight: 500;color: #000000;padding-right: 10px;}
@@ -197,7 +198,10 @@ footer .social-icons svg{height: 20px;}
   .tabs-content-area .tab-content .tabs-top-area .viewall h4{font-size: 13px;}
   .tabs-content-area .tab-content{margin-top: 0;}
   .chart-wrapper{padding: 30px 0;}
-  
+
+  .news-section .news-content h3{font-size: 20px;}
+  .news-section .news-content a{font-size: 12px;}
+  .news-section .news-content p{font-size: 12px;line-height: 17px;}
 
   .promo {background-position: 30%;}
   
