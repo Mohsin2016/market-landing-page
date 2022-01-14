@@ -30,7 +30,7 @@
 <body>
 
    <!-- HEADER -->
-    <header>
+    <header class="shadow-sm">
         <div class="container">
             <div class="header-wrapper">
                 <div class="logo">
@@ -66,7 +66,7 @@
 
 
     <!--HOMEPAGE BANNER-->
-    <section class="homepage-banner" style="background-image: url(./assets/images/banner.png);">
+    <!-- <section class="homepage-banner" style="background-image: url(./assets/images/banner.png);">
         <div class="container">
             <div class="banner-wrapper">
                 <div class="title">
@@ -77,7 +77,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
 
     <!--MARKETS SECTION-->
@@ -85,7 +85,6 @@
         <div class="container">
             <div class="market-topdetail">
                 <h2>All Markets</h2>
-                <p>It is a long established fact that a reader will be distracted by the <br> readable.</p>
             </div>
             <div class="tabs-content-area">
                 <ul class="nav nav-tabs" role="tablist">
@@ -1890,6 +1889,57 @@
 
     <!--MARKETS SECTION-->
 
+    <!--NEWS SECTION-->
+
+    <section class="news-section">
+        <div class="container">
+            <div class="news-content">
+                <div class="top-area">
+                    <h3>Latest News</h3>
+                    <a href="Javascript:void(0)" class="viewall">
+                        <span>View All</span>
+                    </a>
+                </div>
+                <div class="meta">
+                    <div class="date">
+                        <span>DEC 31, 2021</span>
+                    </div>
+                    <div class="info">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente quia voluptatum dolores facere dicta accusamus odit error!</p>
+                    </div>
+                    <div class="read-more">
+                        <a href="">
+                            <svg id="arrow" xmlns="http://www.w3.org/2000/svg" width="16.324" height="14" viewBox="0 0 16.324 14">
+                            <g id="Group_4235" data-name="Group 4235" transform="translate(0 0)">
+                              <path id="Path_169" data-name="Path 169" d="M.981,37.7a1.167,1.167,0,0,1,.2-.015H12.7l-.251-.117a2.336,2.336,0,0,1-.66-.467l-3.23-3.23A1.209,1.209,0,0,1,8.39,32.32a1.168,1.168,0,0,1,1.752-.152l5.84,5.84a1.168,1.168,0,0,1,0,1.652h0l-5.84,5.84a1.168,1.168,0,0,1-1.752-.117,1.209,1.209,0,0,1,.169-1.548L11.783,40.6a2.336,2.336,0,0,1,.584-.426l.35-.158H1.247a1.209,1.209,0,0,1-1.232-.981A1.168,1.168,0,0,1,.981,37.7Z" transform="translate(0 -31.842)" fill="#484848"/>
+                            </g>
+                           </svg>
+                          READ MORE</a>
+                    </div>
+                </div>
+                <div class="meta">
+                    <div class="date">
+                        <span>DEC 31, 2021</span>
+                    </div>
+                    <div class="info">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ut ullam ducimus aut suscipit delectus id, quasi omnis, eius earum temporibus, veniam ipsum. Explicabo error autem totam perferendis consectetur excepturi!</p>
+                    </div>
+                    <div class="read-more">
+                        <a href="">
+                            <svg id="arrow" xmlns="http://www.w3.org/2000/svg" width="16.324" height="14" viewBox="0 0 16.324 14">
+                            <g id="Group_4235" data-name="Group 4235" transform="translate(0 0)">
+                              <path id="Path_169" data-name="Path 169" d="M.981,37.7a1.167,1.167,0,0,1,.2-.015H12.7l-.251-.117a2.336,2.336,0,0,1-.66-.467l-3.23-3.23A1.209,1.209,0,0,1,8.39,32.32a1.168,1.168,0,0,1,1.752-.152l5.84,5.84a1.168,1.168,0,0,1,0,1.652h0l-5.84,5.84a1.168,1.168,0,0,1-1.752-.117,1.209,1.209,0,0,1,.169-1.548L11.783,40.6a2.336,2.336,0,0,1,.584-.426l.35-.158H1.247a1.209,1.209,0,0,1-1.232-.981A1.168,1.168,0,0,1,.981,37.7Z" transform="translate(0 -31.842)" fill="#484848"/>
+                            </g>
+                           </svg>
+                          READ MORE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--NEWS SECTION-->
+
     <!--PROMO-->
 
     <section class="promo promo-fade" style="background-image: url(./assets/images/promo.png);">
@@ -2023,6 +2073,11 @@
         $(document).ready(function(){
             $('.markets-section').waypoint(function(direction){
                 $('.markets-section').addClass('animated animate__slower slower fadeInUp')
+            }, {
+                offset: '80%'
+            })
+            $('.news-section').waypoint(function(direction){
+                $('.news-section').addClass('animated animate__slower slower fadeInUp')
             }, {
                 offset: '80%'
             })
