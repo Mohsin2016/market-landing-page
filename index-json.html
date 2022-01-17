@@ -1900,40 +1900,8 @@
                         <span>View All</span>
                     </a>
                 </div>
-                <div class="meta">
-                    <div class="date">
-                        <span>DEC 31, 2021</span>
-                    </div>
-                    <div class="info">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente quia voluptatum dolores facere dicta accusamus odit error!</p>
-                    </div>
-                    <div class="read-more">
-                        <a href="">
-                            <svg id="arrow" xmlns="http://www.w3.org/2000/svg" width="16.324" height="14" viewBox="0 0 16.324 14">
-                            <g id="Group_4235" data-name="Group 4235" transform="translate(0 0)">
-                                <path id="Path_169" data-name="Path 169" d="M.981,37.7a1.167,1.167,0,0,1,.2-.015H12.7l-.251-.117a2.336,2.336,0,0,1-.66-.467l-3.23-3.23A1.209,1.209,0,0,1,8.39,32.32a1.168,1.168,0,0,1,1.752-.152l5.84,5.84a1.168,1.168,0,0,1,0,1.652h0l-5.84,5.84a1.168,1.168,0,0,1-1.752-.117,1.209,1.209,0,0,1,.169-1.548L11.783,40.6a2.336,2.336,0,0,1,.584-.426l.35-.158H1.247a1.209,1.209,0,0,1-1.232-.981A1.168,1.168,0,0,1,.981,37.7Z" transform="translate(0 -31.842)" fill="#484848"/>
-                            </g>
-                            </svg>
-                            READ MORE</a>
-                    </div>
-                </div>
-                <div class="meta">
-                    <div class="date">
-                        <span>DEC 31, 2021</span>
-                    </div>
-                    <div class="info">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ut ullam ducimus aut suscipit delectus id, quasi omnis, eius earum temporibus, veniam ipsum. Explicabo error autem totam perferendis consectetur excepturi!</p>
-                    </div>
-                    <div class="read-more">
-                        <a href="">
-                            <svg id="arrow" xmlns="http://www.w3.org/2000/svg" width="16.324" height="14" viewBox="0 0 16.324 14">
-                            <g id="Group_4235" data-name="Group 4235" transform="translate(0 0)">
-                                <path id="Path_169" data-name="Path 169" d="M.981,37.7a1.167,1.167,0,0,1,.2-.015H12.7l-.251-.117a2.336,2.336,0,0,1-.66-.467l-3.23-3.23A1.209,1.209,0,0,1,8.39,32.32a1.168,1.168,0,0,1,1.752-.152l5.84,5.84a1.168,1.168,0,0,1,0,1.652h0l-5.84,5.84a1.168,1.168,0,0,1-1.752-.117,1.209,1.209,0,0,1,.169-1.548L11.783,40.6a2.336,2.336,0,0,1,.584-.426l.35-.158H1.247a1.209,1.209,0,0,1-1.232-.981A1.168,1.168,0,0,1,.981,37.7Z" transform="translate(0 -31.842)" fill="#484848"/>
-                            </g>
-                            </svg>
-                            READ MORE</a>
-                    </div>
-                </div>
+
+                <div class="news-list" id="newsList"></div>
             </div>
         </div>
     </section>
@@ -2013,9 +1981,6 @@
                 type: 'get',
                 dataType: 'JSON',
                 success: function(data) {
-
-                    console.log("data", data);
-
                     prepareHighChart(data);                    
                 },
                 error: function(jqXHR, textStatus, errorThrow){
@@ -2049,7 +2014,48 @@
             });
         }
 
+        function getAllNews(){
+            $.ajax({
+                url:"data/news.json",
+                type: 'get',
+                dataType: 'JSON',
+                success: function(data) {
+                    console.log("news", data);
+
+                    var html = null;
+
+                    for (let i = 0; i < data.length; i++) {
+                        html += `<div class="news-item meta">
+                            <div class="date text-muted">
+                                <span>${data[i].date}</span>
+                            </div>
+                            <div class="info">
+                                <h5 class="mb-0 mt-2 text-capitalize">${data[i].title}</h5>
+                                <p>${data[i].body}</p>
+                            </div>
+                            <div class="read-more">
+                                <a href="#">
+                                    <svg id="arrow" xmlns="http://www.w3.org/2000/svg" width="16.324" height="14" viewBox="0 0 16.324 14">
+                                    <g id="Group_4235" data-name="Group 4235" transform="translate(0 0)">
+                                        <path id="Path_169" data-name="Path 169" d="M.981,37.7a1.167,1.167,0,0,1,.2-.015H12.7l-.251-.117a2.336,2.336,0,0,1-.66-.467l-3.23-3.23A1.209,1.209,0,0,1,8.39,32.32a1.168,1.168,0,0,1,1.752-.152l5.84,5.84a1.168,1.168,0,0,1,0,1.652h0l-5.84,5.84a1.168,1.168,0,0,1-1.752-.117,1.209,1.209,0,0,1,.169-1.548L11.783,40.6a2.336,2.336,0,0,1,.584-.426l.35-.158H1.247a1.209,1.209,0,0,1-1.232-.981A1.168,1.168,0,0,1,.981,37.7Z" transform="translate(0 -31.842)" fill="#484848"/>
+                                    </g>
+                                    </svg>
+                                READ MORE</a>
+                            </div>
+                        </div>`
+                    }
+
+                    $("#newsList").html(html);
+                },
+                error: function(jqXHR, textStatus, errorThrow){
+                    console.log(jqXHR['responseText']);
+                }
+            })
+        }
+
         getGraphData('data/DJIA.json');
+
+        getAllNews();
                 
      
 		$(document).on('click', '.details-btn', function(){
